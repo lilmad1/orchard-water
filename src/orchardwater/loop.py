@@ -26,7 +26,6 @@ from datetime import date, datetime, timedelta
 from pathlib import Path
 from typing import Any
 
-from orchardwater import chatbot
 from orchardwater.card import CardTemplateError
 from orchardwater.farm import Block, Farm, FarmFileError, load_farm
 from orchardwater.result import (
@@ -64,7 +63,7 @@ from orchardwater.whatsapp import (
 DEFAULT_DATA_DIR = Path("data") / "whatsapp"
 OUTBOX_NAME = "outbox.jsonl"
 REPLIES_NAME = "replies.jsonl"
-# Replies a person (or later the chatbot) should answer. "ok" needs no answer.
+# Replies a person should answer. "ok" needs no answer.
 NEEDS_ANSWER_BUTTONS = ("question", "more_info")
 # Mid-week updates: only when a block's hours for a day change by at least
 # this many minutes, or its line changes kind (for example "no water" becomes
@@ -475,7 +474,7 @@ def _local_date(iso_text: str) -> date:
 
 
 def handle_reply(reply: Reply, data_dir: Path) -> dict[str, Any]:
-    """Save one farmer reply, tied to the message it answers, then call the chatbot hook.
+    """Save one farmer reply, tied to the message it answers.
 
     The reply is matched to our message by Meta's id when WhatsApp gives it,
     otherwise to the newest message sent to that phone number before the reply.
@@ -495,10 +494,7 @@ def handle_reply(reply: Reply, data_dir: Path) -> dict[str, Any]:
         "message_id": reply.message_id,
         "replied_to": reply.replied_to,
         "needs_answer": needs_answer,
-        "auto_answer": None,
     }
-    if needs_answer:
-        record["auto_answer"] = chatbot.answer(record)
     append_record(data_dir / REPLIES_NAME, record)
     return record
 

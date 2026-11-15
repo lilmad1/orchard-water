@@ -18,7 +18,6 @@ sender prints the message instead of sending it.
 
     Meta webhook --> webhook.py --> whatsapp.parse_webhook --> loop.handle_reply
                                                             --> data/whatsapp/replies.jsonl
-                                                            --> chatbot.answer (None for now)
 
 ## File by file
 
@@ -32,7 +31,6 @@ sender prints the message instead of sending it.
 - `webhook.py`: the small web server Meta calls when a farmer replies.
 - `loop.py`: the command line, and the glue: run blocks, send, save, match a
   reply to the message it answers.
-- `chatbot.py`: one empty function where the chatbot will go.
 
 ## New Python ideas
 
@@ -60,7 +58,7 @@ than the 10 hours asked for.
 
 1. Why does `send` refuse to run twice in the same week?
 2. Why must a block line in the wording file be on one line?
-3. A farmer taps OK. Does the chatbot hook get called?
+3. A farmer taps OK. Is the reply marked as needing an answer?
 4. Why does the webhook server check a signature?
 
 Answers: 1) Each run moves the blocks' saved soil state forward, and the farmer

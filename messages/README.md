@@ -188,9 +188,3 @@ on Mondays, for example `python -m orchardwater.loop send --farm farms/<farm>.js
 active. The machine must be on. The webhook server must run
 all the time to catch replies, so for real farmers this should later move
 to a small always-on server.
-
-## The chatbot hook
-
-`src/orchardwater/chatbot.py` has one function, `answer()`. It is called for every
-Question, More info or typed reply, and today returns nothing, so replies
-wait in `replies.jsonl` for you. The chatbot step replaces its body.

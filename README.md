@@ -17,7 +17,6 @@ others can use and check it. Treat it as research code.
 | Per-farm monthly crop factor (Kc) from the irrigation meter (`kc.py`) | Built. About 6 % season error on one orchard (see below). |
 | Sentinel-2 greenness (NDVI) and Landsat surface temperature reads | Work against the free public catalogues. They are not used in the advice yet. |
 | Soil model: FNO/PINO neural operator (`experiments/soil_operator`) | Research only. It learns this project's own 1D Richards solver from synthetic data. It was never validated on a real farm. |
-| Question chatbot | Not built. `chatbot.py` is an empty hook. |
 
 ### Result on a private dataset
 
