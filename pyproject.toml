@@ -1,0 +1,56 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "orchardwater"
+version = "0.1.0"
+description = "Irrigation advice engine: FAO-56 water balance, satellite reads, weekly message loop"
+license = "Apache-2.0"
+authors = [{name = "Orchard Water contributors"}]
+requires-python = ">=3.12"
+dependencies = [
+    # Windows doesn't ship the IANA timezone database that Python's zoneinfo
+    # needs; this package supplies it (official Python-maintained data, no
+    # code). Needed for the Africa/Casablanca deadline math in weekly.py, which
+    # must account for Morocco's temporary UTC+0 shift during Ramadan.
+    "tzdata>=2024.1",
+    # numpy is the grid-of-numbers type the satellite pictures are
+    # held in while they are read and converted.
+    "numpy>=1.26",
+    # Satellite pictures come from the free Sentinel-2 copy on AWS.
+    # pystac-client asks the catalogue "which pictures cover this field?".
+    "pystac-client>=0.8",
+    # rasterio reads just the field's pixels out of a big satellite file over the
+    # internet and converts between coordinate systems.
+    "rasterio>=1.4",
+    # Landsat temperature pictures come from Microsoft Planetary
+    # Computer, whose files need a short-lived key added to the web address. This
+    # package fetches that key, keeps it, and renews it when it runs out. It reads no
+    # project file; at most an optional settings file in the home folder.
+    "planetary-computer>=1.0",
+]
+
+[project.optional-dependencies]
+dev = ["ruff>=0.6", "mypy>=1.10"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+# E/F: real errors, I: import order, B: common bugs, UP: modern syntax
+select = ["E", "F", "I", "B", "UP"]
+
+[tool.mypy]
+strict = true
+
+[[tool.mypy.overrides]]
+# rasterio and planetary_computer ship no type information, so mypy cannot check
+# calls into them.
+module = ["rasterio", "rasterio.*", "planetary_computer", "planetary_computer.*"]
+ignore_missing_imports = true

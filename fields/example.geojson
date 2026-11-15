@@ -1,0 +1,21 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {"name": "Made-up example field near Agadir, not a real farm"},
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [-9.4500, 30.3500],
+            [-9.4460, 30.3500],
+            [-9.4460, 30.3530],
+            [-9.4500, 30.3530],
+            [-9.4500, 30.3500]
+          ]
+        ]
+      }
+    }
+  ]
+}

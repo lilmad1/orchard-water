@@ -1,0 +1,71 @@
+# DRAFT FRENCH WORDING - NOT yet checked by a native speaker or a farmer.
+# Do not send to a farmer before the operator (and ideally a French-speaking
+# agronomist) has read it. English meaning is in the comment above each line.
+#
+# Times are shown as H:MM, so 1:30 means one hour thirty minutes.
+
+language = fr
+direction = ltr
+meta_template = orchardwater_weekly_fr
+meta_update_template = orchardwater_update_fr
+meta_language = fr
+plan_separator = ;
+
+[greeting]
+# English: Hello {farmer_name}, here is your watering plan for the week (made on {made_on}):
+Bonjour {farmer_name}, voici votre plan d'irrigation de la semaine (fait le {made_on}) :
+
+[update_greeting]
+# English: Hello {farmer_name}, the weather forecast has changed. Here is your updated plan from {made_on}:
+Bonjour {farmer_name}, la météo a changé. Voici votre plan mis à jour à partir du {made_on} :
+
+[block_hours]
+# English: {block}: {hours_per_day} per day until {until_date}
+{block} : {hours_per_day} par jour jusqu'au {until_date}
+
+[block_no_water]
+# English: {block}: no irrigation needed until {until_date}
+{block} : pas d'irrigation nécessaire jusqu'au {until_date}
+
+[block_pump_too_slow]
+# English: {block}: the flow is not enough this week, we will call you
+{block} : le débit ne suffit pas cette semaine, nous vous appelons
+
+[block_check_field]
+# English: {block}: please check the soil today
+{block} : merci de vérifier le sol aujourd'hui
+
+[block_unavailable]
+# English: {block}: no plan this week, please check the soil yourself
+{block} : pas de plan cette semaine, merci de vérifier le sol vous-même
+
+[block_schedule]
+# English: {block}: Mon 1:20, Tue 1:30, Wed none, ... (each day's hours)
+{block} : {schedule}
+
+[schedule_day]
+# English: {day} {hours}, for example "lun 1:20" = Mon 1:20
+{day} {hours}
+
+[day_off]
+# English: none (no watering that day)
+rien
+
+[day_names]
+# English: Mon|Tue|Wed|Thu|Fri|Sat|Sun
+lun|mar|mer|jeu|ven|sam|dim
+
+[closing]
+# English: Tap OK if this is fine for you, or Question if something is unclear.
+Appuyez sur OK si c'est bon pour vous, ou sur Question si quelque chose n'est pas clair.
+
+[button_ok]
+OK
+
+[button_question]
+# English: Question
+Question
+
+[button_more_info]
+# English: More info
+Plus d'infos

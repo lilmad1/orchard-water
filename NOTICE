@@ -1,0 +1,26 @@
+Orchard Water irrigation engine
+Copyright 2026 Orchard Water contributors
+
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+Third-party methods and data
+----------------------------
+This repository contains no third-party datasets. The code reads the following
+free sources at run time. Their terms apply to the data, not to this code.
+
+- FAO-56 (Allen, R.G., Pereira, L.S., Raes, D., Smith, M., 1998. Crop
+  evapotranspiration, FAO Irrigation and Drainage Paper 56). The method
+  (equations and procedures) is implemented; no FAO text or tables are copied.
+
+- NASA/USGS Landsat Collection 2 Level 2 (public domain). Read through the
+  Microsoft Planetary Computer STAC catalogue.
+
+- ESA Copernicus Sentinel-2 (free and open). Read through the Earth Search
+  catalogue on AWS. Attribution: "Contains modified Copernicus Sentinel data".
+
+- Open-Meteo (https://open-meteo.com). Data is licensed CC BY 4.0; attribution
+  is required: "Weather data by Open-Meteo.com". The free API is for
+  non-commercial use only (see https://open-meteo.com/en/terms); commercial
+  use requires one of their paid API plans. Check the current terms before
+  any commercial deployment.
+

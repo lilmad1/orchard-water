@@ -1,0 +1,43 @@
+# TEST WORDING - NOT FOR FARMERS.
+# These sentences exist only so the tests have something to fill in.
+# The operator writes the real cards; see cards/README.md for the format.
+
+language = en
+direction = ltr
+title = TEST WORDING - NOT FOR FARMERS
+
+[irrigate_by_deadline]
+TEST. Water {volume_m3} m3 by {deadline_date} at {deadline_time}.
+
+[pump_too_slow]
+TEST. {volume_m3} m3 is needed by {deadline_date} at {deadline_time}, but the pump is too slow.
+
+[deadline_passed]
+TEST. The time to water ({deadline_date} at {deadline_time}) has passed.
+
+[weekly_amount]
+TEST. Water {volume_m3} m3 this week, valid until {valid_until}.
+
+[weekly_pump_too_slow]
+TEST. {volume_m3} m3 is needed until {valid_until}, but the pump is too slow.
+
+[no_irrigation_due]
+TEST. No watering is needed until {valid_until}.
+
+[soil_at_limit]
+TEST. As of {made_on}, the soil is at, or about to reach, its dry limit. Check the field now.
+
+[early_watering_caution]
+TEST. Do not apply it all much earlier than that.
+
+[after_watering_note]
+TEST. Tell us when you have watered.
+
+[weekly_timing_note]
+TEST. This is for the whole week, not all at once.
+
+[soil_limit_ahead]
+TEST. As of {made_on}, the soil may reach its dry limit around {limit_date} at {limit_time}. Check the field.
+
+[unavailable]
+TEST. As of {made_on}, no estimate is available. Check the field yourself.

@@ -1,0 +1,55 @@
+# TEST WORDING - NOT FOR FARMERS.
+# These sentences exist only so the tests have something to fill in.
+# The operator writes the real messages; see messages/README.md for the format.
+
+language = en
+direction = ltr
+meta_template = orchardwater_weekly_test
+meta_update_template = orchardwater_update_test
+meta_language = en
+plan_separator = ;
+
+[greeting]
+TEST. Hello {farmer_name}. Watering plan made on {made_on}:
+
+[update_greeting]
+TEST. Hello {farmer_name}. The weather changed, new plan from {made_on}:
+
+[block_hours]
+TEST. {block}: {hours_per_day} per day until {until_date}
+
+[block_no_water]
+TEST. {block}: no watering until {until_date}
+
+[block_pump_too_slow]
+TEST. {block}: the valve is too slow for this week's need
+
+[block_check_field]
+TEST. {block}: check the field today
+
+[block_unavailable]
+TEST. {block}: no plan this week, check the field yourself
+
+[block_schedule]
+TEST. {block}: {schedule}
+
+[schedule_day]
+{day} {hours}
+
+[day_off]
+none
+
+[day_names]
+Mon|Tue|Wed|Thu|Fri|Sat|Sun
+
+[closing]
+TEST. Tap OK when you have read this.
+
+[button_ok]
+OK
+
+[button_question]
+Question
+
+[button_more_info]
+More info

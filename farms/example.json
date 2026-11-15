@@ -1,0 +1,31 @@
+{
+  "_note": "Made-up example farm near Agadir, not a real farm or phone number.",
+  "farm_id": "example-farm",
+  "farmer_name": "Test",
+  "phone": "212600000000",
+  "wording_file": "../messages/test_en.txt",
+  "blocks": [
+    {
+      "block_id": "a",
+      "name": "Block A",
+      "lat": 30.3515,
+      "lon": -9.4480,
+      "area_ha": 4.0,
+      "flow_m3_per_h": 40.0,
+      "efficiency": 0.9,
+      "soil": "sandy_loam",
+      "ec_water_ds_m": 1.2
+    },
+    {
+      "block_id": "b",
+      "name": "Block B",
+      "lat": 30.3525,
+      "lon": -9.4470,
+      "area_ha": 6.0,
+      "flow_m3_per_h": 60.0,
+      "efficiency": 0.9,
+      "soil": "sand",
+      "ec_water_ds_m": 1.2
+    }
+  ]
+}

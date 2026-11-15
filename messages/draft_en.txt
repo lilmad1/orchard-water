@@ -1,0 +1,56 @@
+# DRAFT ENGLISH WORDING - NOT yet checked by a native speaker.
+# For demos and English-speaking users. Farmers get French or standard Arabic.
+#
+# Times are shown as H:MM, so 1:30 means one hour thirty minutes.
+
+language = en
+direction = ltr
+meta_template = orchardwater_weekly_en
+meta_update_template = orchardwater_update_en
+meta_language = en
+plan_separator = ;
+
+[greeting]
+Hello {farmer_name}, here is your irrigation plan for the week (made on {made_on}):
+
+[update_greeting]
+Hello {farmer_name}, the weather forecast has changed. Here is your updated plan from {made_on}:
+
+[block_hours]
+{block}: {hours_per_day} per day until {until_date}
+
+[block_no_water]
+{block}: no irrigation needed until {until_date}
+
+[block_pump_too_slow]
+{block}: the flow is not enough this week, we will call you
+
+[block_check_field]
+{block}: please check the soil today
+
+[block_unavailable]
+{block}: no plan this week, please check the soil yourself
+
+[block_schedule]
+{block}: {schedule}
+
+[schedule_day]
+{day} {hours}
+
+[day_off]
+none
+
+[day_names]
+Mon|Tue|Wed|Thu|Fri|Sat|Sun
+
+[closing]
+Tap OK if this works for you, or Question if something is unclear.
+
+[button_ok]
+OK
+
+[button_question]
+Question
+
+[button_more_info]
+More info

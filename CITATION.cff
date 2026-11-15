@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Orchard Water irrigation engine"
+type: software
+authors:
+  - name: "Orchard Water contributors"
+license: Apache-2.0
+version: 0.1.0
+date-released: 2026-11-15

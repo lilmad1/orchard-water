@@ -1,0 +1,25 @@
+.env
+.env.*
+.venv/
+__pycache__/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+data/raw/
+
+# Per-field soil-depletion state - local, machine/run
+# specific, never something to commit or share between machines.
+.orchardwater_state.json
+
+# Real field outlines show where a farmer's land is: private, never commit.
+# Only the made-up example outline is shared.
+fields/*
+!fields/example.geojson
+
+# Weekly WhatsApp loop: farm files hold phone numbers and
+# land locations, and data/ holds sent messages and farmer replies. Private,
+# never commit. Only the made-up example farm is shared.
+data/
+farms/*
+!farms/example.json

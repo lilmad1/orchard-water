@@ -1,0 +1,73 @@
+# DRAFT STANDARD ARABIC WORDING - NOT yet checked by a native speaker or a farmer.
+# Do not send to a farmer before the operator (and ideally a native Arabic speaker)
+# has read it. English meaning is in the comment above each line.
+#
+# Times are shown as H:MM, so 1:30 means one hour thirty minutes.
+# Check on a real phone that the right-to-left text and the numbers look right.
+
+language = ar
+direction = rtl
+meta_template = orchardwater_weekly_ar
+meta_update_template = orchardwater_update_ar
+meta_language = ar
+plan_separator = ؛
+
+[greeting]
+# English: Hello {farmer_name}, here is your irrigation plan for this week (made on {made_on}):
+مرحبا {farmer_name}، هذه خطة الري لهذا الأسبوع (أُعدت في {made_on}):
+
+[update_greeting]
+# English: Hello {farmer_name}, the weather forecast has changed. Here is your updated plan from {made_on}:
+مرحبا {farmer_name}، تغيرت توقعات الطقس. هذه خطة الري المحدثة ابتداء من {made_on}:
+
+[block_hours]
+# English: {block}: {hours_per_day} per day until {until_date}
+{block}: {hours_per_day} في اليوم حتى {until_date}
+
+[block_no_water]
+# English: {block}: no irrigation needed until {until_date}
+{block}: لا حاجة للري حتى {until_date}
+
+[block_pump_too_slow]
+# English: {block}: the flow is not enough this week, we will call you
+{block}: الصبيب غير كافٍ هذا الأسبوع، سنتصل بك
+
+[block_check_field]
+# English: {block}: please check the soil today
+{block}: يرجى فحص التربة اليوم
+
+[block_unavailable]
+# English: {block}: no plan this week, please check the soil yourself
+{block}: لا توجد خطة هذا الأسبوع، يرجى فحص التربة بنفسك
+
+[block_schedule]
+# English: {block}: Monday 1:20, Tuesday 1:30, Wednesday none, ... (each day's hours)
+{block}: {schedule}
+
+[schedule_day]
+# English: {day} {hours}
+{day} {hours}
+
+[day_off]
+# English: none (no watering that day)
+لا ري
+
+[day_names]
+# English: Monday|Tuesday|Wednesday|Thursday|Friday|Saturday|Sunday
+الإثنين|الثلاثاء|الأربعاء|الخميس|الجمعة|السبت|الأحد
+
+[closing]
+# English: Tap OK if this suits you, or Question if something is unclear.
+اضغط على "موافق" إذا كان هذا مناسبا لك، أو على "سؤال" إذا كان هناك شيء غير واضح.
+
+[button_ok]
+# English: OK
+موافق
+
+[button_question]
+# English: Question
+سؤال
+
+[button_more_info]
+# English: More info
+مزيد من المعلومات
